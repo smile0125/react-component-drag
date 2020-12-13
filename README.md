@@ -1,8 +1,15 @@
 # react-component-drag
+
 React components drag and drop
+
 # Installing
+
+```
 npm i react-component-drag
+```
+
 # Example
+
 ```
 import React, { Component } from "react";
 import Drag from "react-component-drag";

@@ -16,7 +16,7 @@ module.exports = {
         bundle: path.join(__dirname, './src/index.jsx'),
     },
     output: {
-        path: path.join(__dirname, './build'),
+        path: path.join(__dirname, './lib'),
         filename: 'index.js',
         library: 'drag', // 指定类库名,主要用于直接引用的方式(比如使用script 标签)
         libraryExport: "default", // 对外暴露default属性，就可以直接调用default里的属性
