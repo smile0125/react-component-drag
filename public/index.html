@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="HONG">
+  <title>HONG</title>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  (function (doc, win) {
+      var docEl = doc.documentElement,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+          recalc = function () {
+              var clientWidth = docEl.clientWidth;
+              //console.log(clientWidth);
+              if (!clientWidth) return;
+              if (clientWidth >= 1920) {
+                  docEl.style.fontSize = '100px';
+              } else {
+                  docEl.style.fontSize = 100 * (clientWidth / 1920) + 'px';
+              }
+          };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+  })(document, window);
+</script>
+</body>
+</html>
