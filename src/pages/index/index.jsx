@@ -9,14 +9,20 @@ class Index extends Component {
   componentDidMount() {
     const target = this.dragDiv;
     let targets = [target];
-    const s = new Drag({ targets }, { isExcess: true, defaultZIndex: 600 });
+    const s = new Drag({ targets }, { isExcess: true, defaultZIndex: 1000 });
     s.start();
   }
 
   render() {
     return (
       <div
-        style={{ position: "absolute", padding: "20px" }}
+        className='drag-component'
+        style={{
+            position: "fixed",
+            padding: "20px",
+            background: '#ffffff',
+            zIndex: 1000,
+        }}
         ref={(dragDiv) => (this.dragDiv = dragDiv)}
       >
         {this.props.children}

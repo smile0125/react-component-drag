@@ -1,6 +1,6 @@
 {
   "name": "react-component-drag",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "react-component-drag Drag and drop at random",
   "main": "lib/index.js",
   "scripts": {

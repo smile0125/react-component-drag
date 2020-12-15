@@ -2,18 +2,14 @@
  * author: smileo125
  * desc: react-drag-dom
  */
-function Drag({
-    targets,
-    isExcess = false
-}) {
+function Drag({ targets, defaultZIndex = 1000 }) {
     let self = this;
     this.target = Array.isArray(targets) ? targets : [targets];
     this.currentTarget = Array.isArray(targets) ? targets[0] : targets;
     this.targetTypeIsArray = Array.isArray(targets);
     this.offsetX = 0;
     this.offsetY = 0;
-    this.zIndex = 10;
-    this.isExcess = isExcess;
+    this.zIndex = defaultZIndex;
 
     this.moveFunc = function (ev) {
         const e = ev || window.event;
